@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026.06.20 (payload)
+
+### What Changed
+- Captured the real Konsole config from a configured Plasma box into the repo:
+  - `Kiro.profile` — default profile (ArcDark colours, Hack Nerd Font 12, 140×40,
+    margin 5, unlimited scrollback, scrollbar right).
+  - `ArcDark.colorscheme` — the matching colour scheme.
+  - `konsolerc` — menubar disabled, `DefaultProfile=Kiro.profile`.
+- All three ship via `/etc/skel` so a new user gets the Kiro profile as the default.
+
+### Files Modified
+- etc/skel/.local/share/konsole/Kiro.profile (new)
+- etc/skel/.local/share/konsole/ArcDark.colorscheme (new)
+- etc/skel/.config/konsolerc (new)
+- etc/skel/.local/share/konsole/.gitkeep (removed — real payload now present)
+
 ## 2026.06.20
 
 ### What Changed

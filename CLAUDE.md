@@ -8,9 +8,10 @@ scheme, and `konsolerc` for Kiro's Plasma edition.
 ## Current state
 
 Created 2026-06-20. Standard Kiro bash scaffold (`up.sh`, `setup.sh`) plus the
-three required markdown files. Payload dir `etc/skel/.local/share/konsole/` is an
-empty placeholder — the actual `*.profile` / `*.colorscheme` files are still to be
-captured from a configured box (see [[plasma-test-box]] / the snapshot workflow).
+three required markdown files. Payload captured from a configured Plasma box:
+`etc/skel/.local/share/konsole/Kiro.profile` (default profile, ArcDark colours,
+Hack Nerd Font 12) + `ArcDark.colorscheme`, and `etc/skel/.config/konsolerc`
+(menubar off, `DefaultProfile=Kiro.profile`). All ship via `/etc/skel`.
 
 ## Patterns & decisions
 
@@ -25,9 +26,8 @@ captured from a configured box (see [[plasma-test-box]] / the snapshot workflow)
 
 ## Next steps
 
-- Capture the real Konsole `*.profile` + `*.colorscheme` from a configured box and
-  drop them into `etc/skel/.local/share/konsole/`.
-- Add the build recipe under `~/KIRO-PKG-BUILD-APPS/` once the payload exists.
+- Add the build recipe under `~/KIRO-PKG-BUILD-APPS/` so it ships a
+  `kiro-plasma-konsole` package (copies `etc/` into the package).
 
 Open work for the ecosystem lives in
 [HQ/MASTER_TODO.md](/home/erik/Insync/Kiro/Kiro-HQ/MASTER_TODO.md) — no per-repo TODO.md.
